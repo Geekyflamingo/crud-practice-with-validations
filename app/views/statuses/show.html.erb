@@ -1,0 +1,14 @@
+<p> Status :
+  <%= @status.description %>
+</p>
+
+<p> User:
+  <%= @status.user %>
+</p>
+
+<p> Likes:
+  <%= @status.number_of_likes %>
+</p>
+
+<%= link_to "Edit", edit_status_path(@status) %>
+<%= link_to "Delete", status_path(@status), method: :delete, data: {confirm: 'Are you sure?'} %>

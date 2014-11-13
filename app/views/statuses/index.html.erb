@@ -1,0 +1,21 @@
+<h1> Status Updates </h1>
+
+<%= link_to "New Status", new_status_path %>
+
+<table>
+  <thead>
+    <th>Status<th>
+    <th> User <th>
+    <th> Likes <th>
+  </thead>
+
+  <tbody>
+    <% @statuses.each do |status| %>
+    <tr>
+      <td> <%= link_to status.description, status_path(status) %></td>
+      <td> <%= status.user %> </td>
+      <td> <%= status.number_of_likes %> </td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
